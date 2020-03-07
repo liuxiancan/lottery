@@ -1,0 +1,10 @@
+$(function(){
+	$(window).ready(function(){
+		$(document).scrollTop(0)
+	})
+	$(window).scroll(function(){
+		if($(document).scrollTop()>0){
+			$('.content-bot>ul').animate({opacity:'1'},1000)
+		}
+	})
+})

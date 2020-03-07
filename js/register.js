@@ -1,0 +1,35 @@
+$(function(){
+	$('input').focus(function(){
+		$(this).css('borderColor','#62A8EA')
+	})
+	$('input').blur(function(){
+		$(this).css('borderColor','#E4EAEC')
+	})
+	$('button').click(function(){
+		if($('input').eq(0).val()==''||$('input').eq(1).val()==''||$('input').eq(2).val()==''||$('input').eq(3).val()==''){
+			if($('input').eq(0).val()==''){
+				$('input').eq(0).next().css('display','block')
+			}else{
+				$('input').eq(0).next().css('display','none')
+			}
+			if($('input').eq(1).val()==''){
+				$('input').eq(1).next().css('display','block')
+			}else{
+				$('input').eq(1).next().css('display','none')
+			}
+			if($('input').eq(2).val()==''){
+				$('input').eq(2).next().css('display','block')
+			}else{
+				$('input').eq(2).next().css('display','none')
+			}
+			if($('input').eq(3).val()==''){
+				$('input').eq(3).next().css('display','block')
+			}else{
+				$('input').eq(3).next().css('display','none')
+			}
+			$('form').attr({onsubmit:'return false'})
+		}else{
+			$('form').removeAttr('onsubmit')
+		}
+	})
+})
